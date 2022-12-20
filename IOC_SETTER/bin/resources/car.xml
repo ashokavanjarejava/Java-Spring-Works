@@ -1,0 +1,70 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="p" class="beans.Product">
+		<property name="productname" value="AC" />
+	</bean>
+
+	<bean id="c" class="beans.Customer">
+		<property name="name" value="Ranjith" />
+		<property name="age" value="25" />
+		<property name="Active" value="true" />
+
+		<property name="product" ref="p" />
+
+		<property name="items">
+			<list>
+				<value>pen</value>
+				<value>book</value>
+				<value>table</value>
+				<value>pen</value>
+			</list>
+		</property>
+
+		<property name="cards">
+			<set>
+				<value>PAN</value>
+				<value>ADHAR</value>
+				<value>DEBT</value>
+				<value>CRDCARD</value>
+				<value>PAN</value>
+			</set>
+		</property>
+		<property name="details">
+			<map>
+				<entry key="address" value="Hyd" />
+				<entry key="mobile" value="6546122332" />
+			</map>
+		</property>
+		<property name="mostLikedItems">
+			<list>
+				<value>pen</value>
+				<value>book</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- <bean id="c" class="beans.Customer">
+		<constructor-arg value=""></constructor-arg>
+		<constructor-arg ref=""></constructor-arg>
+		<constructor-arg>
+			<list></list>
+		</constructor-arg>
+		<constructor-arg>
+			<set></set>
+		</constructor-arg>
+		<constructor-arg></constructor-arg>
+		<constructor-arg></constructor-arg>
+	</bean> -->
+
+
+
+
+
+
+
+
+
+
+</beans>

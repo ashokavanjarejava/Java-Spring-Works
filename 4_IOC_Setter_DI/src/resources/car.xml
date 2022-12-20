@@ -1,0 +1,19 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- <bean class="beans.Car" id="c">
+		<property name="Carname" value="audi"></property>
+	</bean> -->
+
+
+	<bean class="beans.Car" id="c1">
+		<constructor-arg value="BMW" />
+		<constructor-arg value="2500" />
+		<constructor-arg ref="eng-ref" />
+		<property name="Carname" value="AUDI"/>
+	</bean>
+
+	<bean id="eng-ref" class="beans.Engine" />
+
+</beans>
