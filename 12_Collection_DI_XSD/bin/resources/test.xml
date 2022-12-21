@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+    
+  <bean id="t" class="beans.Test">
+      <!-- list fruits -->
+  <property name="fruits">
+      <util:list list-class="java.util.LinkedList">
+          <value>Apple</value>
+          <value>Mango</value>          
+      </util:list>      
+  </property>
+  		<!-- set cricketers -->
+  <property name="cricketers">
+      <util:set set-class="java.util.TreeSet">
+          <value>sachin</value>
+          <value>sehwag</value>
+          <value>sehwag</value>          
+      </util:set>      
+  </property>
+  	<!-- Map countrycap -->
+  <property name="countrycap">
+      <util:map map-class="java.util.Hashtable">
+          <entry key="Ind" value="delhi"/>
+          <entry key="Pak" value="islambad"/>
+          <entry key="Lanka" value="colombo"/>          
+      </util:map>      
+  </property>
+  <!-- Properties statecap -->
+  <property name="statecap">
+      <util:properties location="resources/StateCap.properties"/>
+  </property>    
+     
+  </bean>    
+    
+</beans>
