@@ -1,0 +1,20 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="idly" class="beans.Idly" />
+	<bean id="biryani" class="beans.Biryani" />
+	<bean id="bread" class="beans.Bred" />
+	<bean id="dosa" class="beans.Dosa" />
+	
+	<bean id="customer" class="beans.Customer">
+		<property name="b" ref="bread" />
+	</bean>
+
+
+
+
+
+
+
+</beans>
